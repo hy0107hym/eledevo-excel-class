@@ -16,9 +16,7 @@ function* handleImport(data){
         try {
             let file = data.payload.file
             let form = new FormData()
-            for(let i = 0; i < file.length; i++){
-                form.append('file', file[i])
-            }
+            form.append('file', file[0])
             yield importAPI(form)
             yield put(actions.importSuccess())
             yield put(actions.getRequest())

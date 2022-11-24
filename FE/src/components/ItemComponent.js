@@ -95,7 +95,7 @@ export default class ItemComponent extends Component {
                     this.props.items[i]._id = i + 1
                 }
                 let ws = XLSX.utils.json_to_sheet(this.props.items)
-                let wb = { Sheets: { data: ws }, SheetNames: ['data'] }
+                let wb = { Sheets: { data: ws }, SheetNames: ['d200'] }
                 XLSX.writeFileXLSX(wb, 'excel-test.xlsx')
                 }}
             >Export</button>
